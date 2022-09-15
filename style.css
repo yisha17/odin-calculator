@@ -1,16 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Creepster&display=swap');
+
 body{
     background-color: lightgrey;
     box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 95vh;
 
 }
 
 .main{
-    height: 500px;
-    width: 400px;
+    height: 600px;
+    width: 500px;
     border: 2px solid black;
     border-radius: 10px;
     background-color: rgb(47,46,46);
@@ -19,11 +21,18 @@ body{
     justify-content: flex-start;
 }
 
+.logo{
+    text-align: center;
+    font-family: 'Berkshire Swash', cursive;
+    font-size: 20px;
+    color: rgb(247, 34, 34);
+}
 .display{
-    height: 85px;
+    height: 100px;
     background-color: rgb(221,224,207);
     margin: 10px 15px;
     border: 1px solid gray;
+    border-radius: 5px;
 }
 
 .numbers{
@@ -36,4 +45,39 @@ body{
 }
 
 
+.key{
+    font-size: 40px;
+    color: white;
+    background-image: linear-gradient(rgb(23,23,23), rgb(23,23,23), rgb(44,44,44));
+    border-radius: 5px;
+    
+}
+
+.key:hover{
+    border: 1px solid white;
+}
+
+.grid-row-2{
+    grid-row: span 2;
+   
+}
+#operate{
+    font-size: 40px;
+    background-image:linear-gradient(rgb(223,101,17),rgb(223,101,17),rgb(244,153,94));
+    color: white;
+    border-radius: 5px;
+}
+#operate:hover{
+    border: 1px solid white;
+}
+
+.reset{
+    font-size: 40px;
+    background-image:linear-gradient(rgb(250, 9, 9),rgb(233, 59, 59),rgb(194, 9, 9));
+    color: white;
+    border-radius: 5px;
+}
+.reset:hover{
+    border: 1px solid white;
+}
 
