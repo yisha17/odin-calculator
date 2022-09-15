@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Creepster&display=swap');
-
+@import url('http://fonts.cdnfonts.com/css/scientific-calculator-lcd');
 body{
     background-color: lightgrey;
     box-sizing: border-box;
@@ -35,6 +35,30 @@ body{
     border-radius: 5px;
 }
 
+.trending{
+    font-family: 'Scientific Calculator LCD', sans-serif;
+    margin: 0 10px;
+    text-align: right;
+}
+
+.main-display{
+    text-align: right;
+    margin-top: 0;
+    margin-right: 10px;
+    margin-bottom: 0;
+    font-family: 'Scientific Calculator LCD', sans-serif;
+}
+
+
+.error-message{
+    margin: 0 10px;
+    color: red;
+    font-family: 'Scientific Calculator LCD', sans-serif;
+    text-align: right;
+}
+
+
+
 .numbers{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -63,7 +87,7 @@ body{
 }
 #operate{
     font-size: 40px;
-    background-image:linear-gradient(rgb(223,101,17),rgb(223,101,17),rgb(244,153,94));
+    background-image:linear-gradient(rgb(223,101,17),rgb(223,101,17),rgb(223,101,17),rgb(244,153,94));
     color: white;
     border-radius: 5px;
 }
@@ -73,7 +97,7 @@ body{
 
 .reset{
     font-size: 40px;
-    background-image:linear-gradient(rgb(250, 9, 9),rgb(233, 59, 59),rgb(194, 9, 9));
+    background-image:linear-gradient(rgb(250, 9, 9),rgb(194, 9, 9),rgb(233, 59, 59));
     color: white;
     border-radius: 5px;
 }
