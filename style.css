@@ -1,0 +1,39 @@
+body{
+    background-color: lightgrey;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+
+.main{
+    height: 500px;
+    width: 400px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: rgb(47,46,46);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.display{
+    height: 85px;
+    background-color: rgb(221,224,207);
+    margin: 10px 15px;
+    border: 1px solid gray;
+}
+
+.numbers{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5,1fr);
+    margin: 0px 15PX 10PX 15px;
+    flex: 1;
+    gap: 3px;
+}
+
+
+
