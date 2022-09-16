@@ -37,8 +37,9 @@ body{
 
 .trending{
     font-family: 'Scientific Calculator LCD', sans-serif;
-    margin: 0 10px;
+    margin: 1% 10px;
     text-align: right;
+    height: 20%;
 }
 
 .main-display{
@@ -46,15 +47,18 @@ body{
     margin-top: 0;
     margin-right: 10px;
     margin-bottom: 0;
+    height: 50%;
     font-family: 'Scientific Calculator LCD', sans-serif;
 }
 
 
 .error-message{
-    margin: 0 10px;
+    margin: 1% 10px;
     color: red;
     font-family: 'Scientific Calculator LCD', sans-serif;
     text-align: right;
+    height: 20%;
+    font-size: 12px;
 }
 
 
