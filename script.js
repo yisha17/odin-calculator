@@ -18,7 +18,7 @@ function displayNumber() {
   numbers.forEach((number) => {
     number.addEventListener("click", (e) => {
       console.log(display.textContent);
-      if (display.textContent.length <= 12) {
+      if (display.textContent.length <= 17) {
         if (display.textContent == "0") {
           display.innerHTML = e.target.getAttribute("data-value");
         } else {
