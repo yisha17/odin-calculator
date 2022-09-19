@@ -6,6 +6,9 @@ const operators = document.querySelectorAll(".operator");
 const reset = document.querySelector(".reset");
 const deleteKey = document.querySelector('.delete');
 const equalKey = document.querySelector('#operate');
+const pointKey = document.querySelector('.point');
+const pn = document.querySelector('.pn');
+
 display.textContent = '0'
 
 
@@ -51,6 +54,22 @@ function displayOperation() {
     display.textContent = display.textContent.slice(0,-1);
     if (display.textContent == '') display.textContent = '0'
   });
+
+  pointKey.addEventListener('click', ()=>{
+    if (display.textContent.includes('.')){
+      display.textContent = display.textContent
+    }else{
+      display.textContent = display.textContent + pointKey.textContent
+    }
+  })
+
+  pn.addEventListener('click', ()=> {
+    if (display.textContent[0] != '-'){
+      display.textContent = '-' + display.textContent;
+    }else{
+      display.textContent = display.textContent.substring(1)
+    }
+  })
 }
 
 function operate(){
@@ -84,7 +103,7 @@ function operate(){
       trending.textContent = '';
       break;
     case '+':
-      newValue = value + display.textContent;
+      newValue = Number(value) + Number(display.textContent);
       display.textContent = newValue;
       trending.textContent = '';
       break;
