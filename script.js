@@ -5,9 +5,11 @@ const numbers = document.querySelectorAll(".number");
 const operators = document.querySelectorAll(".operator");
 const reset = document.querySelector(".reset");
 const deleteKey = document.querySelector('.delete');
+const equalKey = document.querySelector('#operate');
 display.textContent = '0'
 
-console.log('again zero');
+
+equalKey.addEventListener('click',operate)
 
 function displayNumber() {
   numbers.forEach((number) => {
@@ -30,6 +32,7 @@ function displayNumber() {
 
 
 function displayOperation() {
+  displayNumber();
   operators.forEach((operator) => {
     operator.addEventListener("click", (e) => {
       
@@ -41,6 +44,7 @@ function displayOperation() {
   reset.addEventListener("click", () => {
     trending.textContent = "";
     display.textContent = "0";
+    errorMessage.textContent ='';
   });
 
   deleteKey.addEventListener("click", () => {
@@ -50,9 +54,48 @@ function displayOperation() {
 }
 
 function operate(){
+  const operation = trending.textContent.slice(-1); 
+  const value = trending.textContent.slice(0,-1);
+  let newValue;
+  switch(operation){
+    case '÷':
+     newValue = (value / display.textContent).toFixed(4);
+     console.log(newValue);
+     console.log(typeof newValue);
+     if (newValue.length > 12){
+      display.textContent = newValue.slice(0,12);
+      console.log("more than twelve");
+     }else{
+      display.textContent = newValue;
+      console.log("here it is");
+     }
+     trending.textContent = '';
+     break;
 
+    case '×':
+      newValue = value * display.textContent;
+
+      if (newValue > 99999999999){
+        display.textContent = newValue.toExponential(3)
+      }else{
+        display.textContent = newValue;
+      }
+      
+      trending.textContent = '';
+      break;
+    case '+':
+      newValue = value + display.textContent;
+      display.textContent = newValue;
+      trending.textContent = '';
+      break;
+    case '-': 
+      newValue = value - display.textContent;
+      display.textContent = newValue;
+      trending.textContent = '';
+      break;     
+  }
 }
 
 displayOperation();
 
-displayNumber();
+
